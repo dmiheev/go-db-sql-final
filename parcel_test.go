@@ -49,6 +49,7 @@ func TestAddGetDelete(t *testing.T) {
 	// проверьте, что значения всех полей в полученном объекте совпадают со значениями полей в переменной parcel
 	parcel, err := store.Get(id)
 	require.NoError(t, err)
+	testParcel.Number = id
 	require.Equal(t, parcel, testParcel)
 
 	// delete
